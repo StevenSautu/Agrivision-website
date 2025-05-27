@@ -1,0 +1,218 @@
+/* Solutions Hero Section */
+.solutions-hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(rgba(46, 125, 50, 0.1), rgba(46, 125, 50, 0.05));
+    text-align: center;
+}
+
+.solutions-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.solutions-hero p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Solutions Cards Section */
+.solutions-cards {
+    padding: 4rem 0;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.solution-card {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+}
+
+.solution-card.featured {
+    border: 2px solid var(--primary-color);
+}
+
+.solution-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.solution-header {
+    margin-bottom: 1.5rem;
+}
+
+.solution-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.solution-header p {
+    color: var(--light-text);
+}
+
+.solution-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.solution-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+}
+
+.solution-features i {
+    color: var(--success-color);
+}
+
+.solution-price {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.solution-price h4 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.solution-price p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+/* Crop Support Section */
+.crop-support {
+    padding: 4rem 0;
+    background-color: var(--light-background);
+}
+
+.crop-support h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.crops-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+
+.crop-item {
+    text-align: center;
+}
+
+.crop-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.crop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crop-item h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* Solution Comparison Section */
+.solution-comparison {
+    padding: 4rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+    background-color: var(--light-background);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.comparison-table td {
+    color: var(--light-text);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table i {
+    color: var(--success-color);
+}
+
+.comparison-table .not-included {
+    color: var(--light-text);
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .crops-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .solutions-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crops-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
