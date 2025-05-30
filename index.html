@@ -9,30 +9,53 @@
     <meta name="author" content="AgriVision">
     <meta name="robots" content="index, follow">
     
-    <!-- Fonts -->
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AgriVision | Smart Agriculture for Zambian Farmers">
+    <meta property="og:description" content="Transform your farming with AI-powered crop disease detection, drone monitoring, and precision agriculture solutions designed for Zambian farmers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agrivision.zm">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgriVision | Smart Agriculture for Zambian Farmers">
+    <meta name="twitter:description" content="Transform your farming with AI-powered solutions designed for Zambian farmers.">
+    <meta name="twitter:image" content="/assets/images/twitter-card.jpg">
+    
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    
     <title>AgriVision | Smart Agriculture for Zambian Farmers</title>
 </head>
 <body>
     <!-- HEADER -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container header-container">
             <div class="logo">
                 <h1>AgriVision</h1>
-                <p>Empowering Zambian Farmers</p>
+                <span class="tagline">Empowering Zambian Farmers</span>
             </div>
-            <div class="mobile-menu-btn">
+            
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
-            <nav class="main-nav">
+            </button>
+            
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#features" class="nav-link">Features</a></li>
@@ -47,46 +70,86 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="main">
         <div class="container hero-container">
             <div class="hero-content">
-                <h2 class="section-title hero-title">Revolutionize Farming with AI, Drones, and IoT</h2>
-                <p class="hero-subtitle">Protect your crops from diseases, pests, and unpredictable weather with AgriVision’s smart agriculture solutions tailored for Zambian farmers.</p>
-                <div class="hero-btns">
-                    <a href="#download" class="btn btn-primary">Download App</a>
-                    <a href="#demo" class="btn btn-secondary"><i class="fas fa-play-circle"></i> Watch Demo</a>
+                <h2 class="hero-title">Revolutionize Farming with AI, Drones, and IoT</h2>
+                <p class="hero-subtitle">Protect your crops from diseases, pests, and unpredictable weather with AgriVision's smart agriculture solutions tailored for Zambian farmers.</p>
+                
+                <div class="hero-actions">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download App
+                    </a>
+                    <a href="#demo" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Demo
+                    </a>
                 </div>
+                
                 <div class="hero-features">
-                    <p><i class="fas fa-check-circle"></i> Drone-based crop scanning</p>
-                    <p><i class="fas fa-check-circle"></i> Real-time soil and weather monitoring</p>
-                    <p><i class="fas fa-check-circle"></i> Precision treatment application</p>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Drone-based crop scanning</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Real-time soil and weather monitoring</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Precision treatment application</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="/api/placeholder/500/420" alt="Drone scanning crops with AgriVision app" />
+            
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="/assets/images/hero-drone-farming.jpg" alt="Drone scanning maize crops in Zambian farm with AgriVision technology" loading="eager" />
+                </div>
+                
+                <!-- Floating UI Elements -->
+                <div class="floating-cards">
+                    <div class="floating-card detection-card">
+                        <i class="fas fa-bug"></i>
+                        <span>Disease Detected</span>
+                    </div>
+                    <div class="floating-card weather-card">
+                        <i class="fas fa-cloud-rain"></i>
+                        <span>Weather Alert</span>
+                    </div>
+                    <div class="floating-card success-card">
+                        <i class="fas fa-seedling"></i>
+                        <span>Crop Health: Good</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- STATS SECTION -->
-    <section class="stats">
+    <section class="stats" aria-label="AgriVision impact statistics">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>10K+</h3>
-                    <p>Zambian Farmers</p>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Zambian Farmers</div>
+                    <div class="stat-description">Trust AgriVision</div>
                 </div>
-                <div class="stat-card">
-                    <h3>95%</h3>
-                    <p>Disease Detection Accuracy</p>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Disease Detection</div>
+                    <div class="stat-description">Accuracy Rate</div>
                 </div>
-                <div class="stat-card">
-                    <h3>5M+</h3>
-                    <p>Hectares Scanned</p>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">5M+</div>
+                    <div class="stat-label">Hectares Scanned</div>
+                    <div class="stat-description">Across Zambia</div>
                 </div>
-                <div class="stat-card">
-                    <h3>50%</h3>
-                    <p>Loss Reduction</p>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Loss Reduction</div>
+                    <div class="stat-description">Average Savings</div>
                 </div>
             </div>
         </div>
@@ -96,58 +159,88 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why AgriVision for Zambian Farmers</h2>
-                <p class="section-subtitle">Harness cutting-edge technology to boost yields and reduce losses</p>
+                <h2 class="section-title">Why Choose AgriVision for Zambian Farming</h2>
+                <p class="section-subtitle">Harness cutting-edge technology designed specifically for Zambian agricultural challenges</p>
             </div>
             
             <div class="features-grid">
-                <div class="feature-card">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
                         <i class="fas fa-drone"></i>
                     </div>
-                    <h3>Drone-Based Crop Scanning</h3>
-                    <p>High-resolution drone cameras detect crop diseases and pests early, capturing details invisible to the human eye.</p>
-                </div>
+                    <h3>Advanced Drone Technology</h3>
+                    <p>High-resolution cameras and multispectral imaging detect crop diseases, pests, and nutrient deficiencies invisible to the human eye, enabling early intervention.</p>
+                    <ul class="feature-benefits">
+                        <li>Early disease detection</li>
+                        <li>Pest identification</li>
+                        <li>Crop health mapping</li>
+                    </ul>
+                </article>
                 
-                <div class="feature-card">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
-                        <i class="fas fa-thermometer-half"></i>
+                        <i class="fas fa-cloud-sun"></i>
                     </div>
-                    <h3>IoT Soil & Weather Monitoring</h3>
-                    <p>Real-time data from IoT sensors guides planting and spraying decisions, adapting to Zambia’s unpredictable weather.</p>
-                </div>
+                    <h3>Smart Environmental Monitoring</h3>
+                    <p>IoT sensors provide real-time data on soil moisture, temperature, humidity, and rainfall - crucial for navigating Zambia's variable climate conditions.</p>
+                    <ul class="feature-benefits">
+                        <li>Soil moisture tracking</li>
+                        <li>Weather forecasting</li>
+                        <li>Irrigation optimization</li>
+                    </ul>
+                </article>
                 
-                <div class="feature-card">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
-                        <i class="fas fa-spray-can"></i>
+                        <i class="fas fa-crosshairs"></i>
                     </div>
                     <h3>Precision Treatment Application</h3>
-                    <p>Drones apply agrochemicals precisely, minimizing waste and environmental impact.</p>
-                </div>
+                    <p>Automated drone spraying applies fertilizers and pesticides with surgical precision, reducing waste by up to 40% while maximizing effectiveness.</p>
+                    <ul class="feature-benefits">
+                        <li>Targeted application</li>
+                        <li>Cost reduction</li>
+                        <li>Environmental protection</li>
+                    </ul>
+                </article>
                 
-                <div class="feature-card">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-icon">
-                        <i class="fas fa-store"></i>
+                        <i class="fas fa-handshake"></i>
                     </div>
-                    <h3>Trusted Vendor Connections</h3>
-                    <p>Access verified local suppliers for quality agrochemicals and inputs.</p>
-                </div>
+                    <h3>Trusted Local Network</h3>
+                    <p>Connect with verified agrochemical suppliers and farming experts across Zambia, ensuring access to quality inputs and professional guidance.</p>
+                    <ul class="feature-benefits">
+                        <li>Verified suppliers</li>
+                        <li>Quality assurance</li>
+                        <li>Expert consultation</li>
+                    </ul>
+                </article>
                 
-                <div class="feature-card">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Data-Driven Insights</h3>
-                    <p>AI-powered analytics provide actionable recommendations to optimize crop health and yields.</p>
-                </div>
+                    <h3>AI-Powered Analytics</h3>
+                    <p>Machine learning algorithms trained on Zambian crop data provide personalized recommendations for planting, treatment, and harvest timing.</p>
+                    <ul class="feature-benefits">
+                        <li>Personalized insights</li>
+                        <li>Predictive analytics</li>
+                        <li>Yield optimization</li>
+                    </ul>
+                </article>
                 
-                <div class="feature-card">
+                <article class="feature-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="feature-icon">
-                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-wifi-off"></i>
                     </div>
-                    <h3>Offline Functionality</h3>
-                    <p>Operate seamlessly in remote Zambian farms with limited connectivity.</p>
-                </div>
+                    <h3>Offline-First Design</h3>
+                    <p>Core functionality works without internet connectivity, perfect for remote Zambian farms. Data syncs automatically when connection is restored.</p>
+                    <ul class="feature-benefits">
+                        <li>No internet required</li>
+                        <li>Remote area support</li>
+                        <li>Automatic sync</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
@@ -156,171 +249,81 @@
     <section class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How AgriVision Transforms Farming</h2>
-                <p class="section-subtitle">A simple process to healthier crops and higher yields</p>
+                <h2 class="section-title">How AgriVision Transforms Your Farming</h2>
+                <p class="section-subtitle">A simple four-step process to healthier crops and higher yields</p>
             </div>
             
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Scan Fields</h3>
-                    <p>Deploy drones to capture high-resolution images of your crops for AI analysis.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Monitor Conditions</h3>
-                    <p>IoT sensors track soil moisture and weather in real time to inform decisions.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Analyze & Recommend</h3>
-                    <p>AI identifies issues and suggests precise treatments and trusted vendors.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Apply Treatments</h3>
-                    <p>Drones apply agrochemicals accurately, reducing waste and boosting efficiency.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOLUTIONS SECTION -->
-    <section id="solutions" class="solutions">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Solutions for Zambian Farms</h2>
-                <p class="section-subtitle">Customized plans for farms of all sizes</p>
-            </div>
-            
-            <div class="solutions-cards">
-                <div class="solution-card">
-                    <div class="solution-header">
-                        <h3>AgriVision Starter</h3>
-                        <p>Ideal for smallholder farmers</p>
-                    </div>
-                    <ul class="solution-features">
-                        <li><i class="fas fa-check"></i> Drone scanning for 10+ crops</li>
-                        <li><i class="fas fa-check"></i> Basic IoT soil monitoring</li>
-                        <li><i class="fas fa-check"></i> Limited offline functionality</li>
-                    </ul>
-                    <a href="#download" class="btn btn-outline">Get Started</a>
-                </div>
-                
-                <div class="solution-card featured">
-                    <div class="solution-tag">Most Popular</div>
-                    <div class="solution-header">
-                        <h3>AgriVision Pro</h3>
-                        <p>For medium to large farms</p>
-                    </div>
-                    <ul class="solution-features">
-                        <li><i class="fas fa-check"></i> Drone scanning for 50+ crops</li>
-                        <li><i class="fas fa-check"></i> Advanced IoT soil & weather monitoring</li>
-                        <li><i class="fas fa-check"></i> Full offline functionality</li>
-                        <li><i class="fas fa-check"></i> Precision drone spraying</li>
-                        <li><i class="fas fa-check"></i> Vendor integration</li>
-                    </ul>
-                    <a href="#download" class="btn btn-primary">Upgrade Now</a>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-header">
-                        <h3>AgriVision Enterprise</h3>
-                        <p>For large-scale operations</p>
-                    </div>
-                    <ul class="solution-features">
-                        <li><i class="fas fa-check"></i> All Pro features</li>
-                        <li><i class="fas fa-check"></i> Multi-farm management</li>
-                        <li><i class="fas fa-check"></i> API for custom integrations</li>
-                        <li><i class="fas fa-check"></i> Dedicated support</li>
-                        <li><i class="fas fa-check"></i> Custom drone configurations</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING SECTION -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Affordable Plans for Every Farmer</h2>
-                <p class="section-subtitle">Choose a plan tailored to your needs</p>
-            </div>
-            
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Free Trial</h3>
-                        <div class="price">
-                            <span class="price-amount">K0</span>
-                            <span class="price-period">/ 30 days</span>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-visual">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
                         </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 5 drone scans</li>
-                        <li><i class="fas fa-check"></i> Basic IoT monitoring</li>
-                        <li><i class="fas fa-check"></i> 5 major crops supported</li>
-                    </ul>
-                    <a href="#download" class="btn btn-outline">Start Free Trial</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <div class="price">
-                            <span class="price-amount">K50.99</span>
-                            <span class="price-period">/ month</span>
+                    <div class="step-content">
+                        <h3>Intelligent Field Scanning</h3>
+                        <p>Deploy AI-powered drones to capture detailed aerial imagery of your crops, identifying potential issues before they become visible problems.</p>
+                        <div class="step-details">
+                            <span>• High-resolution imaging</span>
+                            <span>• Multi-spectral analysis</span>
+                            <span>• Complete field coverage</span>
                         </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Unlimited drone scans</li>
-                        <li><i class="fas fa-check"></i> Standard IoT monitoring</li>
-                        <li><i class="fas fa-check"></i> 10+ crops supported</li>
-                        <li><i class="fas fa-check"></i> Basic offline mode</li>
-                    </ul>
-                    <a href="#download" class="btn btn-outline">Choose Starter</a>
                 </div>
                 
-                <div class="pricing-card featured">
-                    <div class="pricing-tag">Best Value</div>
-                    <div class="pricing-header">
-                        <h3>Pro</h3>
-                        <div class="price">
-                            <span class="price-amount">K120.99</span>
-                            <span class="price-period">/ month</span>
+                <div class="process-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-visual">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-thermometer-half"></i>
                         </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> All Starter features</li>
-                        <li><i class="fas fa-check"></i> Advanced IoT monitoring</li>
-                        <li><i class="fas fa-check"></i> 50+ crops supported</li>
-                        <li><i class="fas fa-check"></i> Full offline functionality</li>
-                        <li><i class="fas fa-check"></i> Precision spraying</li>
-                    </ul>
-                    <a href="#download" class="btn btn-primary">Choose Pro</a>
+                    <div class="step-content">
+                        <h3>Real-Time Environmental Monitoring</h3>
+                        <p>IoT sensors continuously track soil conditions, weather patterns, and environmental factors specific to your farm's location.</p>
+                        <div class="step-details">
+                            <span>• Soil moisture levels</span>
+                            <span>• Weather predictions</span>
+                            <span>• Growth condition alerts</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                        <div class="price">
-                            <span class="price-amount">Custom</span>
-                            <span class="price-period">pricing</span>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-visual">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
                         </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> All Pro features</li>
-                        <li><i class="fas fa-check"></i> Multi-farm access</li>
-                        <li><i class="fas fa-check"></i> API integration</li>
-                        <li><i class="fas fa-check"></i> Custom drone setups</li>
-                        <li><i class="fas fa-check"></i> Priority support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    <div class="step-content">
+                        <h3>AI Analysis & Recommendations</h3>
+                        <p>Advanced algorithms process collected data to identify diseases, pests, and optimal treatment strategies, connecting you with trusted suppliers.</p>
+                        <div class="step-details">
+                            <span>• Disease identification</span>
+                            <span>• Treatment recommendations</span>
+                            <span>• Supplier connections</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-left" data-aos-delay="400">
+                    <div class="step-visual">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Precision Treatment Application</h3>
+                        <p>Automated drone systems apply treatments with pinpoint accuracy, ensuring optimal crop health while minimizing resource waste.</p>
+                        <div class="step-details">
+                            <span>• Targeted application</span>
+                            <span>• Resource optimization</span>
+                            <span>• Maximum effectiveness</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,64 +333,98 @@
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Zambian Farmers’ Success Stories</h2>
-                <p class="section-subtitle">Hear how AgriVision is transforming agriculture in Zambia</p>
+                <h2 class="section-title">Success Stories from Zambian Farmers</h2>
+                <p class="section-subtitle">Real farmers, real results - discover how AgriVision is transforming agriculture across Zambia</p>
             </div>
             
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p>"AgriVision’s drones caught a pest infestation in my maize fields early, saving 70% of my harvest. The IoT sensors helped me plant at the right time despite erratic rains."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="/api/placeholder/60/60" alt="Chileshe Mwamba" />
+            <div class="testimonials-container">
+                <div class="testimonials-slider" id="testimonialSlider">
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
                             </div>
-                            <div class="author-info">
-                                <h4>Chileshe Mwamba</h4>
-                                <p>Maize Farmer, Lusaka</p>
+                            <blockquote>
+                                "AgriVision saved my entire maize harvest. The drones detected army worm infestation two weeks before I could see it. The precision spraying reduced my chemical costs by 45% while eliminating the pests completely."
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="/assets/images/testimonials/chileshe-mwamba.jpg" alt="Chileshe Mwamba, Maize Farmer" loading="lazy" />
+                                </div>
+                                <div class="author-info">
+                                    <h4>Chileshe Mwamba</h4>
+                                    <p>Maize Farmer, Lusaka Province</p>
+                                    <div class="testimonial-stats">
+                                        <span class="stat">200 hectares</span>
+                                        <span class="stat">70% yield increase</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
+                    
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <blockquote>
+                                "The IoT sensors helped me understand my soil like never before. I now know exactly when to plant and irrigate. My tomato yields doubled, and the quality improved dramatically. AgriVision connected me with reliable suppliers in Ndola."
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="/assets/images/testimonials/mutinta-chanda.jpg" alt="Mutinta Chanda, Vegetable Farmer" loading="lazy" />
+                                </div>
+                                <div class="author-info">
+                                    <h4>Mutinta Chanda</h4>
+                                    <p>Vegetable Farmer, Copperbelt Province</p>
+                                    <div class="testimonial-stats">
+                                        <span class="stat">50 hectares</span>
+                                        <span class="stat">100% yield increase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <blockquote>
+                                "Our cooperative manages 500 hectares with AgriVision Enterprise. The multi-farm dashboard helps us coordinate planting and harvesting across all our members. We've reduced post-harvest losses by 60% through better timing."
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="/assets/images/testimonials/joseph-phiri.jpg" alt="Joseph Phiri, Cooperative Leader" loading="lazy" />
+                                </div>
+                                <div class="author-info">
+                                    <h4>Joseph Phiri</h4>
+                                    <p>Cooperative Leader, Eastern Province</p>
+                                    <div class="testimonial-stats">
+                                        <span class="stat">500 hectares</span>
+                                        <span class="stat">60% loss reduction</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p>"The precision spraying feature reduced my chemical costs by 40%. AgriVision connected me to a trusted vendor in Ndola, ensuring I got quality products."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="/api/placeholder/60/60" alt="Mutinta Chanda" />
-                            </div>
-                            <div class="author-info">
-                                <h4>Mutinta Chanda</h4>
-                                <p>Vegetable Farmer, Copperbelt</p>
-                            </div>
-                        </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-nav prev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial-dots">
+                        <button class="dot active" aria-label="Show testimonial 1"></button>
+                        <button class="dot" aria-label="Show testimonial 2"></button>
+                        <button class="dot" aria-label="Show testimonial 3"></button>
                     </div>
+                    <button class="testimonial-nav next" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left quote-icon"></i>
-                        <p>"With AgriVision, our cooperative monitors 500 hectares efficiently. The AI insights helped us double our tomato yields by catching diseases early."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="/api/placeholder/60/60" alt="Joseph Phiri" />
-                            </div>
-                            <div class="author-info">
-                                <h4>Joseph Phiri</h4>
-                                <p>Cooperative Leader, Eastern Province</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
             </div>
         </div>
     </section>
@@ -395,195 +432,112 @@
     <!-- PARTNERS SECTION -->
     <section class="partners">
         <div class="container">
-            <h2 class="section-title">Our Trusted Partners</h2>
+            <div class="section-header">
+                <h2 class="section-title">Trusted Partners Across Zambia</h2>
+                <p class="section-subtitle">Working with leading organizations to support Zambian agriculture</p>
+            </div>
+            
             <div class="partners-grid">
                 <div class="partner-logo">
-                    <img src="/api/placeholder/150/80" alt="Zambian Ministry of Agriculture" />
+                    <img src="/assets/images/partners/ministry-agriculture.png" alt="Zambian Ministry of Agriculture" loading="lazy" />
                 </div>
                 <div class="partner-logo">
-                    <img src="/api/placeholder/150/80" alt="AgroChem Zambia" />
+                    <img src="/assets/images/partners/agrochem-zambia.png" alt="AgroChem Zambia" loading="lazy" />
                 </div>
                 <div class="partner-logo">
-                    <img src="/api/placeholder/150/80" alt="ZNFU" />
+                    <img src="/assets/images/partners/znfu.png" alt="Zambia National Farmers Union" loading="lazy" />
                 </div>
                 <div class="partner-logo">
-                    <img src="/api/placeholder/150/80" alt="Smart Zambia Institute" />
+                    <img src="/assets/images/partners/smart-zambia.png" alt="Smart Zambia Institute" loading="lazy" />
                 </div>
                 <div class="partner-logo">
-                    <img src="/api/placeholder/150/80" alt="Bayer Zambia" />
+                    <img src="/assets/images/partners/bayer-zambia.png" alt="Bayer Zambia" loading="lazy" />
                 </div>
                 <div class="partner-logo">
-                    <img src="/api/placeholder/150/80" alt="Zamseed" />
+                    <img src="/assets/images/partners/zamseed.png" alt="Zamseed Company" loading="lazy" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DOWNLOAD SECTION -->
-    <section id="download" class="download">
+    <!-- DOWNLOAD CTA SECTION -->
+    <section id="download" class="download-cta">
         <div class="container">
-            <div class="download-content">
-                <h2 class="section-title">Start Farming Smarter Today</h2>
-                <p class="section-subtitle">Download AgriVision to protect your crops and boost yields</p>
-                
-                <div class="app-buttons">
-                    <a href="#" class="app-button">
-                        <i class="fab fa-apple"></i>
-                        <span>
-                            <small>Download on the</small>
-                            App Store
-                        </span>
-                    </a>
-                    <a href="#" class="app-button">
-                        <i class="fab fa-google-play"></i>
-                        <span>
-                            <small>GET IT ON</small>
-                            Google Play
-                        </span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="qr-code">
-                <p>Scan QR code to download</p>
-                <div class="qr-image">
-                    <img src="/api/placeholder/150/150" alt="QR Code" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-            </div>
-            
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do I need my own drone to use AgriVision?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No, AgriVision partners with local drone service providers in Zambia to offer scanning services. You can also use your own compatible drone with our Pro and Enterprise plans.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How does AgriVision work without internet?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our app’s core features, including disease detection and IoT data storage, work offline. Data syncs automatically when you reconnect to the internet.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What crops are supported in Zambia?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>AgriVision supports major Zambian crops like maize, soybeans, tomatoes, groundnuts, and cassava. Pro and Enterprise plans cover 50+ crops, including local varieties.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How accurate is the disease detection?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our AI achieves 95% accuracy for common diseases and pests in Zambian crops, with ongoing improvements through local data training.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can AgriVision integrate with my existing tools?</h3>
-                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, our Enterprise plan offers API access for integration with farm management systems, and Pro users can export data for analysis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-subtitle">We’re here to support Zambian farmers</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <p>Email: support@agrivision.zm</p>
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2 class="section-title">Start Farming Smarter Today</h2>
+                    <p class="section-subtitle">Join thousands of Zambian farmers already using AgriVision to protect their crops and increase yields</p>
+                    
+                    <div class="cta-stats">
+                        <div class="cta-stat">
+                            <strong>Free 30-day trial</strong>
+                            <span>No credit card required</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <p>Phone: +260 966 123 456</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Address: Plot 123, AgTech Hub, Lusaka, Zambia</p>
+                        <div class="cta-stat">
+                            <strong>24/7 support</strong>
+                            <span>In English and local languages</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                    
+                    <div class="app-download-buttons">
+                        <a href="#" class="app-button ios-button" aria-label="Download AgriVision from App Store">
+                            <i class="fab fa-apple"></i>
+                            <div class="button-text">
+                                <small>Download on the</small>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
                         
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                        <a href="#" class="app-button android-button" aria-label="Download AgriVision from Google Play">
+                            <i class="fab fa-google-play"></i>
+                            <div class="button-text">
+                                <small>GET IT ON</small>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="cta-visual">
+                    <div class="qr-code-container">
+                        <p>Scan to download</p>
+                        <div class="qr-code">
+                            <img src="/assets/images/qr-code-download.png" alt="QR code to download AgriVision app" loading="lazy" />
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    </div>
+                    
+                    <div class="phone-mockup">
+                        <img src="/assets/images/app-screenshot-main.png" alt="AgriVision mobile app interface showing crop health dashboard" loading="lazy" />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-brand">
                     <h3>AgriVision</h3>
-                    <p>Transforming Zambian agriculture with AI, drones, and IoT</p>
+                    <p>Transforming Zambian agriculture through innovative technology, empowering farmers with AI-driven solutions for sustainable and profitable farming.</p>
+                    
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link facebook" aria-label="Follow AgriVision on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Follow AgriVision on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Follow AgriVision on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link linkedin" aria-label="Follow AgriVision on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link youtube" aria-label="Subscribe to AgriVision on YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -593,109 +547,80 @@
                         <li><a href="#features">Features</a></li>
                         <li><a href="#solutions">Solutions</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">Updates</a></li>
-                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="/updates">Updates</a></li>
+                        <li><a href="/roadmap">Roadmap</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Crop Guides</a></li>
-                        <li><a href="#">Weather Insights</a></li>
-                        <li><a href="#">Tutorial Videos</a></li>
-                        <li><a href="#">Zambian Farming Tips</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="/crop-guides">Crop Guides</a></li>
+                        <li><a href="/weather-insights">Weather Insights</a></li>
+                        <li><a href="/tutorials">Tutorial Videos</a></li>
+                        <li><a href="/farming-tips">Zambian Farming Tips</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Press</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/press">Press</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-newsletter">
-                    <h4>Subscribe to Our Newsletter</h4>
-                    <p>Get farming tips, weather updates, and AgriVision news</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address">
-                        <button type="submit" class="btn btn-sm">Subscribe</button>
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest farming tips, weather alerts, and AgriVision product updates delivered to your inbox.</p>
+                    
+                    <form class="newsletter-form" aria-label="Newsletter signup">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Subscribe
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2025 AgriVision Zambia. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
+                    <p>&copy; 2025 AgriVision Zambia. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/cookies">Cookie Policy</a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+260966123456">+260 966 123 456</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:support@agrivision.zm">support@agrivision.zm</a>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Optional: Analytics or other tracking scripts -->
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.main-nav').classList.toggle('show');
-        });
-
-        // Smooth scrolling for nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-                document.querySelector('.main-nav').classList.remove('show');
-            });
-        });
-
-        // FAQ accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            item.querySelector('.faq-question').addEventListener('click', () => {
-                item.classList.toggle('active');
-                const icon = item.querySelector('.faq-icon i');
-                icon.classList.toggle('fa-plus');
-                icon.classList.toggle('fa-minus');
-            });
-        });
-
-        // Testimonials slider
-        const slider = document.querySelector('.testimonials-slider');
-        const dots = document.querySelectorAll('.testimonial-dots .dot');
-        let currentIndex = 0;
-
-        function updateSlider() {
-            slider.scrollTo({
-                left: slider.clientWidth * currentIndex,
-                behavior: 'smooth'
-            });
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-        }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentIndex = index;
-                updateSlider();
-            });
-        });
-
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % dots.length;
-            updateSlider();
-        }, 5000);
+        // Google Analytics or other tracking code can go here
+        // Example: gtag configuration
     </script>
 </body>
 </html>
